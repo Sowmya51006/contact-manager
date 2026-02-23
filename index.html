@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactHub | Premium Contact Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>ContactHub</h1>
+
+        <div class="header-actions">
+            <div class="search-container" style="flex: 1; margin-bottom: 0; margin-right: 15px;">
+                <input type="text" id="search" placeholder="Search by name or phone...">
+            </div>
+            <button class="btn-add" onclick="openModal()">
+                <i class="fas fa-plus"></i> Add Contact
+            </button>
+        </div>
+
+        <div id="contactList" class="contact-grid">
+            <!-- Contacts will be rendered here -->
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle" style="margin-bottom: 20px;">Add New Contact</h2>
+            <div class="form">
+                <input type="text" id="name" placeholder="Full Name">
+                <input type="text" id="phone" placeholder="Phone Number">
+                <input type="email" id="email" placeholder="Email Address">
+                <input type="text" id="address" placeholder="Residential Address">
+                
+                <div class="form-actions">
+                    <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+                    <button class="btn-save" onclick="saveContact()">Save Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
